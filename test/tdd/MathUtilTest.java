@@ -27,7 +27,7 @@ public class MathUtilTest {
     
     @Test(expected = IllegalArgumentException.class)
     public void testFailedCases(){
-        
+        //assertEquals(-5, this);
     }
     
 }
