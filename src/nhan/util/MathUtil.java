@@ -16,10 +16,23 @@ public class MathUtil {
     //int chi toi da 2 ty 1, nen ta xai long moi an toan
     //thuc ra 15! to lawsm roi nen ta chi tinh giai thua tu 15 tro lai
     public static long computeFactorial(int n) {
-        long result = 1;
-        for (int i = 1; i <= n; i++) {
-            result = result * i;//result*=i
+        if(n<0 || n > 15) throw new IllegalArgumentException("Invalid input. N must be >= 0 ");
+        if(n==0 || n==1)
+            return 1;
+            //ddieu kien dung cua de quy 
+            //song sot den lenh cho nayf thi n chac chan roi vao 2.......15
+            return n*computeFactorial(n-1); // n*(n-1)
+        
+    }
+    public static long computeFactorialrecusrion(int n,long result) {
+        if(n<0 || n > 15) throw new IllegalArgumentException("Invalid input. N must be >= 0 ");
+        else if(n==1){
+            return result;
         }
-        return result;
+        else {
+           
+            return computeFactorialrecusrion(n-1,result*n);
+        }
+      
     }
 }

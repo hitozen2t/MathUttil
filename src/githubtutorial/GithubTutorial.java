@@ -6,6 +6,7 @@
 package githubtutorial;
 
 import static nhan.util.MathUtil.computeFactorial;
+import static nhan.util.MathUtil.computeFactorialrecusrion;
 //them static la mot cau lenh moi xuat hien tu jdk8 => dep luon ten class viet nhu ham trong c
 
 /**
@@ -25,7 +26,7 @@ public class GithubTutorial {
         //expected 1 if 0!
         System.out.println("0!="+computeFactorial(0));
         //expected Exception if cf(-5)
-        System.out.println("-5!="+computeFactorial(-5));
+        System.out.println("-5!="+computeFactorialrecusrion(-5,1));
     }
     
 }
